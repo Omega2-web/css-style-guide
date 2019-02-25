@@ -12,7 +12,7 @@ Deze guide beschrijft algemene richtlijnen voor frontend development (html, css,
 - [Gebruik van important](#gebruik-van-important)
 - [(Optioneel) BEM](#optioneel-bem)
 
-## [Algemeen](#algemeen)
+## Algemeen
 - Absolute url's zonder domeinnaam voor: Afbeeldingen, stylesheets, javascript, achtergrond-afbeeldingen, ect.
 - Gebruik geen* id's! <sup>* Er zijn enkele uitzonderingen. Bijvoorbeeld gegenereerde id's en javascipt gebruik.</sub>
 
@@ -28,7 +28,7 @@ Deze guide beschrijft algemene richtlijnen voor frontend development (html, css,
 ```
 
 ## CSS
-### [kebab-case](#kebab-case)
+### kebab-case
 Alle id's en classes in kebab-case (tenzij je BEM gebruikt).
 
 ❌ **Fout:**
@@ -46,7 +46,7 @@ Alle id's en classes in kebab-case (tenzij je BEM gebruikt).
 <ul class="main-menu"></ul>
 ```
 
-### [Recycelen](#recycelen)
+### Recycelen
 ❌ **Niet:** recycelen als de eigenschappen toevallig overeen komen. 
 ```css
 .main-menu__item,
@@ -76,7 +76,7 @@ _In dit geval komen de gewenste properties toevallig overeen. Dan moeten ze gewo
 ```
 _In deze gevallen komen de properties om een reden overeen. Als er een property moet worden aangepast mogen ze op beide locaties wijzigen._
 
-### [Volgorde](#volgorde)
+### Volgorde
 Probeer in globale lijnen de volgorde van het document aan te houden. Liever 2x declareren dan een onduidelijk document. 
 Site- en document algemene declaraties bovenin het bestand. Groeperen met comments mag. 
 
@@ -97,7 +97,7 @@ Site- en document algemene declaraties bovenin het bestand. Groeperen met commen
     }
 ```
 
-### [Uitlijnen](#uitlijnen)
+### Uitlijnen
 ❌ **Fout:**
 ```css
 .main-menu 
@@ -137,7 +137,7 @@ In enkele gevallen mogen declaraties op één regel. Bijvoorbeeld als er veel ru
 .cloud item-4 { top: 40px; left: 120px; }
 ```
 
-### [Single-responsibility classes](#single-responsibility-classes)
+### Single-responsibility classes
 Het komt voor dat je modifiers gebruikt als class (✔). Maar gebruik deze alleen voor die modification! Daardoor kun je ze herbruiken.
 
 ❌ **Fout:**
@@ -171,11 +171,11 @@ Het komt voor dat je modifiers gebruikt als class (✔). Maar gebruik deze allee
 }
 ```
 
-### [Media queries](#media-queries)
+### Media queries
 Zet niet alle rulesets voor mobiel in één media query. De volgorde van het document is belangrijker. 
 Gebruik minimaal aantal breakpoints. Zorg dat de mogelijke breakpoints bovenaan in het document vast staan. 
 
-### [Gebruik van important](#gebruik-van-important)
+### Gebruik van important
 Probeer `!important` te vermijden!
 
 1. Werkt het als ik `!important` toevoeg?
@@ -188,8 +188,8 @@ Zie:
 - [Which CSS entities participate in the cascadeSection](https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade)
 
 
-### [(Optioneel) BEM](#optioneel-bem) 
-Formaat: `block-name__elem-name_mod-name_mod-val`
+### (Optioneel) BEM
+Formaat: `block-name__elem-name_mod-name_mod-val`  
 Bem info: [[1]](https://en.bem.info/methodology/quick-start/)[[2]](http://getbem.com/introduction/)[[3]](http://getbem.com/naming/)
 
 - Names are written in lowercase Latin letters.
