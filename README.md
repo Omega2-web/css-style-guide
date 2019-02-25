@@ -9,8 +9,8 @@ Deze guide beschrijft algemene richtlijnen voor frontend development (html, css,
 - [Uitlijnen](#uitlijnen)
 - [Single-responsibility classes](#single-responsibility-classes)
 - [Media queries](#media-queries)
-- [Gebruik van important](#important-gebruik)
-- [(Optioneel) BEM](#bem)
+- [Gebruik van important](#gebruik-van-important)
+- [(Optioneel) BEM](#optioneel-bem)
 
 ## [Algemeen](#algemeen)
 - Absolute url's zonder domeinnaam voor: Afbeeldingen, stylesheets, javascript, achtergrond-afbeeldingen, ect.
@@ -175,7 +175,7 @@ Het komt voor dat je modifiers gebruikt als class (✔). Maar gebruik deze allee
 Zet niet alle rulesets voor mobiel in één media query. De volgorde van het document is belangrijker. 
 Gebruik minimaal aantal breakpoints. Zorg dat de mogelijke breakpoints bovenaan in het document vast staan. 
 
-### [Gebruik van important](#important-gebruik)
+### [Gebruik van important](#gebruik-van-important)
 Probeer `!important` te vermijden!
 
 1. Werkt het als ik `!important` toevoeg?
@@ -188,8 +188,9 @@ Zie:
 - [Which CSS entities participate in the cascadeSection](https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade)
 
 
-### [(Optioneel) BEM](#bem) [[1]](https://en.bem.info/methodology/quick-start/)[[2]](http://getbem.com/introduction/)[[3]](http://getbem.com/naming/)
-`block-name__elem-name_mod-name_mod-val`
+### [(Optioneel) BEM](#optioneel-bem) 
+Formaat: `block-name__elem-name_mod-name_mod-val`
+Bem info: [[1]](https://en.bem.info/methodology/quick-start/)[[2]](http://getbem.com/introduction/)[[3]](http://getbem.com/naming/)
 
 - Names are written in lowercase Latin letters.
 - Words are separated by a hyphen (-).
