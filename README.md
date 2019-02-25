@@ -1,9 +1,20 @@
 # Frontend style guide
 Deze guide beschrijft algemene richtlijnen voor frontend development (html, css, js).
 
-## Algemeen
+**Inhoud**
+- [Algemeen](#algemeen)
+- [kebab-case](#kebab-case)
+- [Recycelen](#recycelen)
+- [Volgorde](#volgorde)
+- [Uitlijnen](#uitlijnen)
+- [Single-responsibility classes](#single-responsibility-classes)
+- [Media queries](#media-queries)
+- [Gebruik van important](#important-gebruik)
+- [(Optioneel) BEM](#bem)
+
+## [Algemeen](#algemeen)
 - Absolute url's zonder domeinnaam voor: Afbeeldingen, stylesheets, javascript, achtergrond-afbeeldingen, ect.
-- Gebruik geen* id's! <sup>Er zijn enkele uitzonderingen. Bijvoorbeeld gegenereerde id's en specifieke elementen voor javascipt.</sub>
+- Gebruik geen* id's! <sup>* Er zijn enkele uitzonderingen. Bijvoorbeeld gegenereerde id's en javascipt gebruik.</sub>
 
 ❌ **Fout:**
 ```html
@@ -17,18 +28,8 @@ Deze guide beschrijft algemene richtlijnen voor frontend development (html, css,
 ```
 
 ## CSS
-**Index**
-- Algemeen
-- Benamingen
-- Volgorde
-- Uitlijnen
-- Single-responsibility classes
-- Blokken met media queries
-- Gebruik van !important
-
-**Algemeen**
-## kabab-case
-Alle id's en classes in kabab-case (tenzij je BEM gebruikt).
+### [kebab-case](#kebab-case)
+Alle id's en classes in kebab-case (tenzij je BEM gebruikt).
 
 ❌ **Fout:**
 ```html
@@ -45,7 +46,7 @@ Alle id's en classes in kabab-case (tenzij je BEM gebruikt).
 <ul class="main-menu"></ul>
 ```
 
-## Recycelen
+### [Recycelen](#recycelen)
 ❌ **Niet:** recycelen als de eigenschappen toevallig overeen komen. 
 ```css
 .main-menu__item,
@@ -75,7 +76,7 @@ _In dit geval komen de gewenste properties toevallig overeen. Dan moeten ze gewo
 ```
 _In deze gevallen komen de properties om een reden overeen. Als er een property moet worden aangepast mogen ze op beide locaties wijzigen._
 
-## Volgorde
+### [Volgorde](#volgorde)
 Probeer in globale lijnen de volgorde van het document aan te houden. Liever 2x declareren dan een onduidelijk document. 
 Site- en document algemene declaraties bovenin het bestand. Groeperen met comments mag. 
 
@@ -96,7 +97,7 @@ Site- en document algemene declaraties bovenin het bestand. Groeperen met commen
     }
 ```
 
-## Uitlijnen
+### [Uitlijnen](#uitlijnen)
 ❌ **Fout:**
 ```css
 .main-menu 
@@ -136,7 +137,7 @@ In enkele gevallen mogen declaraties op één regel. Bijvoorbeeld als er veel ru
 .cloud item-4 { top: 40px; left: 120px; }
 ```
 
-## Single-responsibility classes
+### [Single-responsibility classes](#single-responsibility-classes)
 Het komt voor dat je modifiers gebruikt als class (✔). Maar gebruik deze alleen voor die modification! Daardoor kun je ze herbruiken.
 
 ❌ **Fout:**
@@ -170,10 +171,11 @@ Het komt voor dat je modifiers gebruikt als class (✔). Maar gebruik deze allee
 }
 ```
 
-## Blokken met media queries
+### [Media queries](#media-queries)
 Zet niet alle rulesets voor mobiel in één media query. De volgorde van het document is belangrijker. 
+Gebruik minimaal aantal breakpoints. Zorg dat de mogelijke breakpoints bovenaan in het document vast staan. 
 
-## Gebruik van important
+### [Gebruik van important](#important-gebruik)
 Probeer `!important` te vermijden!
 
 1. Werkt het als ik `!important` toevoeg?
@@ -186,7 +188,7 @@ Zie:
 - [Which CSS entities participate in the cascadeSection](https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade)
 
 
-## (Optioneel) BEM [[1]](https://en.bem.info/methodology/quick-start/)[[2]](http://getbem.com/introduction/)[[3]](http://getbem.com/naming/)
+### [(Optioneel) BEM](#bem) [[1]](https://en.bem.info/methodology/quick-start/)[[2]](http://getbem.com/introduction/)[[3]](http://getbem.com/naming/)
 `block-name__elem-name_mod-name_mod-val`
 
 - Names are written in lowercase Latin letters.
@@ -197,13 +199,13 @@ Zie:
 - The modifier value is separated from the modifier name by a single underscore (\_).
 - For boolean modifiers, the value is not included in the name.
 
-### Block
+#### Block
 ✔ **Goed:**
 ```html
 <ul class="main-menu"></ul>
 ```
 
-### Element
+#### Element
 ❌ **Fout:**
 ```html
 <li class="item"></li>
@@ -215,7 +217,7 @@ Zie:
 <li class="main-menu__item"></li>
 ```
 
-### Modifiers
+#### Modifiers
 ❌ **Fout:**
 ```html
 <li class="main-menu__item active"></li>
